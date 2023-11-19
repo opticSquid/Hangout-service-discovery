@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: service-discovery
+  profiles:
+    active: home
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+
+logging:
+  level:
+    web: error
