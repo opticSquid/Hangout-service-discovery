@@ -3,6 +3,9 @@ spring:
     name: service-discovery
   profiles:
     active: home
+  output:
+    ansi:
+      enabled: ALWAYS
 
 eureka:
   instance:
