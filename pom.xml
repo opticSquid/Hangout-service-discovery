@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.hangout.backend.auxillary</groupId>
-	<artifactId>servicediscovery</artifactId>
+	<artifactId>hangout-servicediscovery</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>servicediscovery</name>
+	<name>hangout-servicediscovery</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>

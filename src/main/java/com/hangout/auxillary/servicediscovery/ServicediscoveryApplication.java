@@ -1,4 +1,4 @@
-package com.hangout.backend.auxillary.servicediscovery;
+package com.hangout.auxilliary.servicediscovery;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
