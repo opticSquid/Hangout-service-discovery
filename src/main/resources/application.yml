@@ -6,14 +6,12 @@ spring:
   output:
     ansi:
       enabled: ALWAYS
-
 eureka:
-  instance:
-    hostname: localhost
   client:
-    registerWithEureka: false
-    fetchRegistry: false
-
+    registerWithEureka: true
+    fetchRegistry: true
 logging:
   level:
-    web: error
+    web: info
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
