@@ -1,6 +1,31 @@
 server:
   port: 8761
+
+spring:
+  mvc:
+    async:
+      request-timeout: 35s
 eureka:
+  instance:
+    metadata-map:
+      metrics.path: /actuator/prometheus
   client:
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    service-url:
+      default-zone: http://localhost:8761/eureka
+
+# All traces should be sent to latency analysis tool
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
+  # For Exemplars to work we need histogram buckets
+  metrics:
+    distribution:
+      percentiles-histogram:
+        http:
+          server:
+            requests: true
